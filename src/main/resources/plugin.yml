@@ -1,0 +1,4 @@
+name: MMOPlugin
+version: '${project.version}'
+main: mmo.mmoplugin.MMOPlugin
+api-version: '1.21'
