@@ -36,6 +36,10 @@ public final class MMOPlugin extends JavaPlugin {
 
 
         //register events and commands
+
+        getServer().getPluginManager().registerEvents(new DeathMain(), this);
+
+
         registerCommandsAndListeners();
 
 
