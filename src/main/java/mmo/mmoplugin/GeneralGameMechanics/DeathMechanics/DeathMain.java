@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.UUID;
 
-public class DeathMain implements Listener {
+public class DeathMain implements Listener{
 
 
 
@@ -31,8 +31,8 @@ public class DeathMain implements Listener {
 
         e.setCancelled(true);
 
-        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 20*4, 200));
-        player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20*4, 1));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 20*4, 200,true));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20*4, 1,true));
 
         for(int i = 0; i<5; i++) {
             player.playSound(player.getLocation(), Sound.BLOCK_VAULT_OPEN_SHUTTER, 5.0f, 0.0f);
@@ -47,10 +47,5 @@ public class DeathMain implements Listener {
 
     }
 
-    @EventHandler
-    public void test(BlockBreakEvent e){
-        Player player = e.getPlayer();
-        player.sendMessage("Success!!");
-    }
 
 }
