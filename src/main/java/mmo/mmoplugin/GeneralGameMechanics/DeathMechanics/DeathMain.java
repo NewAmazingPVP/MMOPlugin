@@ -33,13 +33,15 @@ public class DeathMain implements Listener {
 
         player.addPotionEffect(new PotionEffect(PotionEffectType.SLOWNESS, 20*4, 200));
         player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20*4, 1));
-        
+
         for(int i = 0; i<5; i++) {
-            player.playSound(player.getLocation(), Sound.BLOCK_VAULT_OPEN_SHUTTER, 5.0f, 2.0f);
+            player.playSound(player.getLocation(), Sound.BLOCK_VAULT_OPEN_SHUTTER, 5.0f, 0.0f);
         }
 
 
-        player.sendTitle(ChatColor.RED + "☠ " + ChatColor.BOLD +  "[YOU DIED]" + ChatColor.RED +  " ☠", ChatColor.YELLOW + "<Splash text>", 0, 80, 20);
+        player.sendTitle(ChatColor.RED + "☠ " + ChatColor.BOLD +  "[YOU DIED]" + ChatColor.RED +  " ☠", ChatColor.YELLOW + "<Splash text>", 0, 60, 20);
+
+        player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[YOU DIED]");
 
 
 
