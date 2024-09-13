@@ -9,7 +9,7 @@ public class RegisterEventsAndCMD {
 
 
     public static void registerCommandsAndListeners(){
-        getServer().getPluginManager().registerEvents(new DeathMain(), plugin);
+
     }
 
 
