@@ -1,5 +1,6 @@
 package mmo.mmoplugin.GeneralGameMechanics.DeathMechanics;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Effect;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -18,7 +19,10 @@ public class DeathMain implements Listener {
 
         e.setCancelled(true);
 
-        player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20*3, 1));
+        player.addPotionEffect(new PotionEffect(PotionEffectType.BLINDNESS, 20*4, 1));
+
+        player.sendTitle(ChatColor.RED + "☠ " + ChatColor.BOLD +  "[YOU DIED]" + ChatColor.RED +  " ☠", ChatColor.YELLOW + "<Splash text>", 0, 80, 20);
+
 
 
     }
