@@ -26,7 +26,7 @@ public class DeathMain implements Listener {
     @EventHandler
     public void test(BlockBreakEvent e){
         Player player = e.getPlayer();
-        player.sendMessage("Success!");
+        player.sendMessage("Success!!");
     }
 
 }
