@@ -22,7 +22,7 @@ public class DeathMain implements Listener{
 
 
 
-    private final ArrayList<String> deathSplashMessages = new ArrayList<>();
+    private final List<String> deathSplashMessages = List.of("element");
     @EventHandler
     public void playerDeathEvent(PlayerDeathEvent e){
 
