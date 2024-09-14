@@ -52,7 +52,13 @@ public class DeathMain implements Listener{
         Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DI§c§lE§4§lD] §4☠", "§e" + splashText, 0, 60, 20), 16);
         Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIE§c§lD§4§l] §4☠", "§e" + splashText, 0, 60, 20), 18);
         Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED§c§l] §4☠", "§e" + splashText, 0, 60, 20), 20);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED] §l☠", "§e" + splashText, 0, 60, 20), 22);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED] §c☠", "§e" + splashText, 0, 60, 20), 22);
+
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[§kY§4§lOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 25);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU D§kI§4§lED] §4☠", "§e" + splashText, 0, 60, 20), 30);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YO§kU §4§lDIED] §4☠", "§e" + splashText, 0, 60, 20), 33);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIE§kD§4§l] §4☠", "§e" + splashText, 0, 60, 20), 28);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[Y§kO§4§lU DIED] §4☠", "§e" + splashText, 0, 60, 20), 33);
 
 
 
