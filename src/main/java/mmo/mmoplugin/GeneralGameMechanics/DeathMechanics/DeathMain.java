@@ -13,6 +13,7 @@ import org.bukkit.potion.PotionEffectType;
 
 import java.util.*;
 
+import static mmo.mmoplugin.Constants.respawnLoc1;
 import static mmo.mmoplugin.MMOPlugin.MMOPlugin;
 
 public class DeathMain implements Listener{
@@ -53,12 +54,13 @@ public class DeathMain implements Listener{
         Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIE§c§lD§4§l] §4☠", "§e" + splashText, 0, 60, 20), 18);
         Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED§c§l] §4☠", "§e" + splashText, 0, 60, 20), 20);
         Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED] §c☠", "§e" + splashText, 0, 60, 20), 22);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 24);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.teleport(respawnLoc1), 26);
 
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[§kY§4§lOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 25);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU D§kI§4§lED] §4☠", "§e" + splashText, 0, 60, 20), 30);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YO§kU §4§lDIED] §4☠", "§e" + splashText, 0, 60, 20), 33);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIE§kD§4§l] §4☠", "§e" + splashText, 0, 60, 20), 28);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[Y§kO§4§lU DIED] §4☠", "§e" + splashText, 0, 60, 20), 33);
+
+
+
+
 
 
 
