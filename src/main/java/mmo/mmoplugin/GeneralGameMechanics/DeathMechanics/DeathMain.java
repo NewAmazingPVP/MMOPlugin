@@ -40,18 +40,19 @@ public class DeathMain implements Listener{
 
         player.sendMessage(ChatColor.RED + "" + ChatColor.BOLD + "[YOU DIED]");
 
-        player.sendTitle("§4☠ §l[YOU DIED] §4☠", "§e<Splash text>", 0, 60, 20);
+        player.sendTitle("§4☠ §l[YOU DIED] §4☠", "§e" + splashText, 0, 60, 20);
 
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§c☠ §4§l[YOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 5);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §c§l[§4§lYOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 10);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[§c§lY§4§lOU DIED] §4☠", "§" + splashText, 0, 60, 20), 15);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[Y§c§lO§4§lU DIED] §4☠", "§e" + splashText, 0, 60, 20), 20);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YO§c§lU§4§l DIED] §4☠", "§e" + splashText, 0, 60, 20), 25);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU §c§lD§4§lIED] §4☠", "§e" + splashText, 0, 60, 20), 30);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU D§c§lI§4§lED] §4☠", "§e" + splashText, 0, 60, 20), 35);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DI§c§lE§4§lD] §4☠", "§e" + splashText, 0, 60, 20), 40);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIE§c§lD§4§l] §4☠", "§e" + splashText, 0, 60, 20), 45);
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED§c§l] §4☠", "§e" + splashText, 0, 60, 20), 50);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§c☠ §4§l[YOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 2);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §c§l[§4§lYOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 4);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[§c§lY§4§lOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 6);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[Y§c§lO§4§lU DIED] §4☠", "§e" + splashText, 0, 60, 20), 8);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YO§c§lU§4§l DIED] §4☠", "§e" + splashText, 0, 60, 20), 10);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU §c§lD§4§lIED] §4☠", "§e" + splashText, 0, 60, 20), 12);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU D§c§lI§4§lED] §4☠", "§e" + splashText, 0, 60, 20), 14);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DI§c§lE§4§lD] §4☠", "§e" + splashText, 0, 60, 20), 16);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIE§c§lD§4§l] §4☠", "§e" + splashText, 0, 60, 20), 18);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED§c§l] §4☠", "§e" + splashText, 0, 60, 20), 20);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED] §l☠", "§e" + splashText, 0, 60, 20), 22);
 
 
 
