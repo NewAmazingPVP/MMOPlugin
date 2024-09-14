@@ -24,7 +24,7 @@ public final class MMOPlugin extends JavaPlugin {
 
 
     public static MMOPlugin MMOPlugin;
-    public static World SMPworld = Bukkit.getWorld("MMOWorld");
+    public static World MMOworld = Bukkit.getWorld("world");
     public static final String PLUGIN_WATERMARK = "© 2024 [NewAmazingPVP & Comet99 & Lex] - [MMOPlugin]";
     @Override
     public void onEnable() {
