@@ -37,13 +37,17 @@ public class DeathMain implements Listener{
             player.playSound(player.getLocation(), Sound.BLOCK_VAULT_OPEN_SHUTTER, 5.0f, 0.0f);
         }
 
-        player.sendTitle("§4☠ [YOU DIED] ☠", "§e<Splash text>", 0, 60, 20);
+        player.sendTitle("§4☠ §l[YOU DIED] §4☠", "§e<Splash text>", 0, 60, 20);
 
         //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle(ChatColor.RED + "☠ " + ChatColor.DARK_RED + ChatColor.BOLD +  "[YOU DIED]" + ChatColor.RED +  " ☠", ChatColor.YELLOW + "<Splash text>", 0, 60, 20), 5);
         //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle(ChatColor.RED + "☠ " + ChatColor.BOLD +  "[" + ChatColor.DARK_RED + ChatColor.BOLD +  "YOU DIED]" + ChatColor.RED +  " ☠", ChatColor.YELLOW + "<Splash text>", 0, 60, 20), 10);
         //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle(ChatColor.RED + "☠ " + ChatColor.BOLD +  "[YOU DIED]" + ChatColor.RED +  " ☠", ChatColor.YELLOW + "<Splash text>", 0, 60, 20), 15);
         //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle(ChatColor.RED + "☠ " + ChatColor.BOLD +  "[YOU DIED]" + ChatColor.RED +  " ☠", ChatColor.YELLOW + "<Splash text>", 0, 60, 20), 20);
 
+
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_AMBIENT, 5.0f, 3.0f), 20*3);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_AMBIENT, 5.0f, 3.0f), 20*3);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_AMBIENT, 5.0f, 3.0f), 20*3);
 
 
 
