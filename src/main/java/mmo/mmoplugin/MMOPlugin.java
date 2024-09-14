@@ -28,6 +28,7 @@ public final class MMOPlugin extends JavaPlugin {
     public static final String PLUGIN_WATERMARK = "© 2024 [NewAmazingPVP & Comet99 & Lex] - [MMOPlugin]";
     @Override
     public void onEnable() {
+        MMOPlugin = this;
         // server start up things below
         getLogger().info("Starting " + PLUGIN_WATERMARK);
         getLogger().info("DO NOT USE ANYTHING FROM THIS PLUGIN FOR MONETARY GAN!!!");
