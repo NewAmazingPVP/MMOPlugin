@@ -11,10 +11,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 import static mmo.mmoplugin.MMOPlugin.MMOPlugin;
 
@@ -22,9 +19,13 @@ public class DeathMain implements Listener{
 
 
 
-    private final List<String> deathSplashMessages = List.of("element");
+    private final List<String> deathSplashMessages = List.of("lol","L Bozo","Bro... Get Good","LLLLLLLL","Pro tip: DON'T DIE","Get Good Bro...","Next time... don't do that...","Get used to it, this will happen IRL one day.","It's just a game...");
     @EventHandler
     public void playerDeathEvent(PlayerDeathEvent e){
+
+        Random random = new Random();
+        int randomIndex = random.nextInt(deathSplashMessages.size());
+        String splashText = deathSplashMessages.get(randomIndex);
 
         Player player = e.getPlayer();
 
@@ -41,22 +42,22 @@ public class DeathMain implements Listener{
 
         player.sendTitle("§4☠ §l[YOU DIED] §4☠", "§e<Splash text>", 0, 60, 20);
 
-        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§c☠ §4§l[YOU DIED] §4☠", "§e<Splash text>", 0, 60, 20), 5);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §c§l[§4§lYOU DIED] §4☠", "§e<Splash text>", 0, 60, 20), 10);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[§c§lY§4§lOU DIED] §4☠", "§e<Splash text>", 0, 60, 20), 15);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[Y§c§lO§4§lU DIED] §4☠", "§e<Splash text>", 0, 60, 20), 20);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YO§c§lU§4§l DIED] §4☠", "§e<Splash text>", 0, 60, 20), 25);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU §c§lD§4§lIED] §4☠", "§e<Splash text>", 0, 60, 20), 30);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU D§c§lI§4§lED] §4☠", "§e<Splash text>", 0, 60, 20), 35);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DI§c§lE§4§lD] §4☠", "§e<Splash text>", 0, 60, 20), 40);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIE§c§lD§4§l] §4☠", "§e<Splash text>", 0, 60, 20), 45);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED§c§l] §4☠", "§e<Splash text>", 0, 60, 20), 50);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§c☠ §4§l[YOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 5);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §c§l[§4§lYOU DIED] §4☠", "§e" + splashText, 0, 60, 20), 10);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[§c§lY§4§lOU DIED] §4☠", "§" + splashText, 0, 60, 20), 15);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[Y§c§lO§4§lU DIED] §4☠", "§e" + splashText, 0, 60, 20), 20);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YO§c§lU§4§l DIED] §4☠", "§e" + splashText, 0, 60, 20), 25);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU §c§lD§4§lIED] §4☠", "§e" + splashText, 0, 60, 20), 30);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU D§c§lI§4§lED] §4☠", "§e" + splashText, 0, 60, 20), 35);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DI§c§lE§4§lD] §4☠", "§e" + splashText, 0, 60, 20), 40);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIE§c§lD§4§l] §4☠", "§e" + splashText, 0, 60, 20), 45);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.sendTitle("§4☠ §l[YOU DIED§c§l] §4☠", "§e" + splashText, 0, 60, 20), 50);
 
 
 
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_AMBIENT, 5.0f, 3.0f), 20*3);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_AMBIENT, 5.0f, 3.0f), 20*3);
-        //Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_AMBIENT, 5.0f, 3.0f), 20*3);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_AMBIENT, 5.0f, 3.0f), 20*3);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_AMBIENT, 5.0f, 3.0f), 20*3);
+        Bukkit.getScheduler().runTaskLater(MMOPlugin, () -> player.playSound(player.getLocation(), Sound.ENTITY_ELDER_GUARDIAN_AMBIENT, 5.0f, 3.0f), 20*3);
 
 
 
