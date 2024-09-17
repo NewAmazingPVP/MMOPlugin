@@ -1,6 +1,7 @@
 package mmo.mmoplugin;
 
 import mmo.mmoplugin.GeneralGameMechanics.DeathMechanics.DeathMain;
+import mmo.mmoplugin.GeneralGameMechanics.MainMenuAndStats.MainMenuListener;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -39,6 +40,8 @@ public final class MMOPlugin extends JavaPlugin {
         //register events and commands
 
         getServer().getPluginManager().registerEvents(new DeathMain(), this);
+        getServer().getPluginManager().registerEvents(new MainMenuListener(), this);
+
 
 
         registerCommandsAndListeners();
