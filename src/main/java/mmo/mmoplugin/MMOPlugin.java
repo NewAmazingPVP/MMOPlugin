@@ -43,7 +43,7 @@ public final class MMOPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new DeathMain(), this);
         getServer().getPluginManager().registerEvents(new MainMenuListener(), this);
 
-        getCommand("abilitys").setExecutor(new OpenAbilityMenuCMD());
+        getCommand("abilities").setExecutor(new OpenAbilityMenuCMD());
 
 
 
