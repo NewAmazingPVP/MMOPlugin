@@ -71,15 +71,7 @@ public class backwardsLaunchAbility {
                         return;
                     }
 
-
-
-
-
-                    for(int x = 0; x<10; x++) {
-
-                        double y = cos(x);
-
-                    }
+                    
 
 
                     /*animationLoop +=1;
