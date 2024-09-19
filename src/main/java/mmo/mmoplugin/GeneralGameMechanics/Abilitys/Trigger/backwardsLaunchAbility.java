@@ -53,24 +53,26 @@ public class backwardsLaunchAbility {
                         this.cancel();
                         return;
                     }
+                    
 
-                    player.sendMessage("test");
 
-                    p1.setY(+.2);
-                    p1.setX(+.5);
-                    p1.setZ(+.5);
+                    p1.setY(p1.getY() + .2);
+                    p1.setY(p1.getY() + .5);
+                    p1.setY(p1.getY() + .5);
 
-                    p2.setY(+.2);
-                    p2.setX(-.5);
-                    p2.setZ(+.5);
+                    p2.setY(p2.getY() + .2);
+                    p2.setY(p2.getY() - .5);
+                    p2.setY(p2.getY() - .5);
 
-                    p3.setY(+.2);
-                    p3.setX(+.5);
-                    p3.setZ(-.5);
+                    p3.setY(p3.getY() + .2);
+                    p3.setY(p3.getY() - .5);
+                    p3.setY(p3.getY() + .5);
 
-                    p4.setY(+.2);
-                    p4.setX(-.5);
-                    p4.setZ(-.5);
+                    p4.setY(p4.getY() + .2);
+                    p4.setY(p4.getY() + .5);
+                    p4.setY(p4.getY() - .5);
+
+
 
                     for (Player player : Bukkit.getOnlinePlayers()) {
                         player.getWorld().spawnParticle(Particle.DUST, p1, 0, new Particle.DustOptions(Color.AQUA, 2.0f));
