@@ -21,7 +21,7 @@ public class AbilityMenu {
 
     public static void openAbilityMenu(Player player){
 
-        Inventory abilityMenu = Bukkit.createInventory(player, 27, "§d§l[Select Abilitys]");
+        Inventory abilityMenu = Bukkit.createInventory(player, 27, "§d§l[Select Abilities]");
 
         abilityMenu.setItem(0,purpleGUIGlass());
         abilityMenu.setItem(1,purpleGUIGlass());
@@ -84,13 +84,13 @@ public class AbilityMenu {
     }
 
     public static ItemStack abilitySlotCurrentlyLocked(int abilityLevel, String clickType) {
-        ItemStack ITEM = new ItemStack(Material.IRON_PICKAXE);
+        ItemStack ITEM = new ItemStack(Material.BARRIER);
         ItemMeta meta = ITEM.getItemMeta();
         meta.setDisplayName("§4§lAbility Slot Locked! " + "§e[" + clickType + "]");
         meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
         List<String> LORE = new ArrayList<>();
         LORE.add(" ");
-        LORE.add("§cUnlocked at level" + abilityLevel);
+        LORE.add("§cUnlocked at level " + abilityLevel);
         meta.setLore(LORE);
         ITEM.setItemMeta(meta);
         return ITEM;

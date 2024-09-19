@@ -4,7 +4,7 @@ main: mmo.mmoplugin.MMOPlugin
 api-version: '1.21'
 
 commands:
-  abilitys:
+  abilities:
     description: Opens the ability select menu
-    usage: /abilitys
+    usage: /abilities
     aliases: ab
