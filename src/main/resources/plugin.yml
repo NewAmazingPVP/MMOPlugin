@@ -2,3 +2,9 @@ name: MMOPlugin
 version: '${project.version}'
 main: mmo.mmoplugin.MMOPlugin
 api-version: '1.21'
+
+commands:
+  abilitys:
+    description: Opens the ability select menu
+    usage: /abilitys
+    aliases: ab

@@ -1,5 +1,6 @@
 package mmo.mmoplugin;
 
+import mmo.mmoplugin.GeneralGameMechanics.Commands.UserCommands.OpenAbilityMenuCMD;
 import mmo.mmoplugin.GeneralGameMechanics.DeathMechanics.DeathMain;
 import mmo.mmoplugin.GeneralGameMechanics.MainMenuAndStats.MainMenuListener;
 import org.bukkit.Bukkit;
@@ -41,6 +42,8 @@ public final class MMOPlugin extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new DeathMain(), this);
         getServer().getPluginManager().registerEvents(new MainMenuListener(), this);
+
+        getCommand("abilitys").setExecutor(new OpenAbilityMenuCMD());
 
 
 
