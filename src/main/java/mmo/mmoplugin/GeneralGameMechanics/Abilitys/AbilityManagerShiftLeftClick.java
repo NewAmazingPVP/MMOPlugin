@@ -25,7 +25,7 @@ public class AbilityManagerShiftLeftClick implements Listener {
             if(player.isSneaking()){
 
 
-                backwardsLaunchAbilityTRIGGER(loc,player); 
+                backwardsLaunchAbilityTRIGGER(loc,player);
 
 
             }
