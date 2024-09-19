@@ -30,8 +30,8 @@ public class backwardsLaunchAbility {
 
             Vector direction = player.getLocation().toVector().subtract(loc.toVector()).normalize();
             Vector velocity = direction.multiply(1.5);
-            if (velocity.getY() > 10.0) {
-                velocity.setY(10.0);
+            if (velocity.getY() > 1) {
+                velocity.setY(1);
             }
 
             player.setVelocity(velocity);
