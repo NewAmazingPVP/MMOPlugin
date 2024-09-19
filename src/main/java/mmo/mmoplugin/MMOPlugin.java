@@ -1,5 +1,6 @@
 package mmo.mmoplugin;
 
+import mmo.mmoplugin.GeneralGameMechanics.Abilitys.AbilityManagerShiftLeftClick;
 import mmo.mmoplugin.GeneralGameMechanics.Commands.UserCommands.OpenAbilityMenuCMD;
 import mmo.mmoplugin.GeneralGameMechanics.DeathMechanics.DeathMain;
 import mmo.mmoplugin.GeneralGameMechanics.MainMenuAndStats.MainMenuListener;
@@ -8,7 +9,6 @@ import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import static mmo.mmoplugin.RegisterEventsAndCMD.registerCommandsAndListeners;
-import static org.bukkit.Bukkit.getServer;
 
 //          $$\      $$\ $$\      $$\  $$$$$$\        $$$$$$$\  $$\      $$\   $$\  $$$$$$\  $$$$$$\ $$\   $$\
 //          $$$\    $$$ |$$$\    $$$ |$$  __$$\       $$  __$$\ $$ |     $$ |  $$ |$$  __$$\ \_$$  _|$$$\  $$ |
@@ -42,6 +42,9 @@ public final class MMOPlugin extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new DeathMain(), this);
         getServer().getPluginManager().registerEvents(new MainMenuListener(), this);
+        getServer().getPluginManager().registerEvents(new AbilityManagerShiftLeftClick(), this);
+
+
 
         getCommand("abilities").setExecutor(new OpenAbilityMenuCMD());
 
