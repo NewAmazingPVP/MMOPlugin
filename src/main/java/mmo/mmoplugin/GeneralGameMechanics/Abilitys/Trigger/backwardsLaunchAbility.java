@@ -49,28 +49,28 @@ public class backwardsLaunchAbility {
 
                     animationLoop +=1;
 
-                    if(animationLoop > 10){
+                    if(animationLoop > 50){
                         this.cancel();
                         return;
                     }
-                    
 
 
-                    p1.setY(p1.getY() + .2);
-                    p1.setY(p1.getY() + .5);
-                    p1.setY(p1.getY() + .5);
 
-                    p2.setY(p2.getY() + .2);
-                    p2.setY(p2.getY() - .5);
-                    p2.setY(p2.getY() - .5);
+                    p1.setY(p1.getY() + .1);
+                    p1.setX(p1.getX() + .3);
+                    p1.setZ(p1.getZ() + .3);
 
-                    p3.setY(p3.getY() + .2);
-                    p3.setY(p3.getY() - .5);
-                    p3.setY(p3.getY() + .5);
+                    p2.setY(p2.getY() + .1);
+                    p2.setX(p2.getX() - .3);
+                    p2.setZ(p2.getZ() - .3);
 
-                    p4.setY(p4.getY() + .2);
-                    p4.setY(p4.getY() + .5);
-                    p4.setY(p4.getY() - .5);
+                    p3.setY(p3.getY() + .1);
+                    p3.setX(p3.getX() - .3);
+                    p3.setZ(p3.getZ() + .3);
+
+                    p4.setY(p4.getY() + .1);
+                    p4.setX(p4.getX() + .3);
+                    p4.setZ(p4.getZ() - .3);
 
 
 
@@ -83,7 +83,7 @@ public class backwardsLaunchAbility {
 
                 }
             };
-            backLaunchParticles.runTaskTimer(MMOPlugin, 0L, 5L);
+            backLaunchParticles.runTaskTimer(MMOPlugin, 0L, 1L);
 
 
 
