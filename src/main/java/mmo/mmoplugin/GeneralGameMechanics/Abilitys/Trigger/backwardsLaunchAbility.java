@@ -38,7 +38,7 @@ public class backwardsLaunchAbility {
 
             loc.setY(loc.getY()+1);
 
-            world.spawnParticle(Particle.CLOUD,loc,2);
+            world.spawnParticle(Particle.CLOUD,loc,20);
 
             backLaunchParticles = new BukkitRunnable() {
 
