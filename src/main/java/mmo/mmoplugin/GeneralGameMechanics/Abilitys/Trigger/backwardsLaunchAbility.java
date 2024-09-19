@@ -54,10 +54,10 @@ public class backwardsLaunchAbility {
                         return;
                     }
 
-                    player.sendMessage("---" + p1);
+                    player.sendMessage("+++" + p1);
 
                     p1.setY(p1.getY() + .1);
-                    p1.setX(p1.getX() + 1);
+                    p1.setX(p1.getX() + .5);
                     p1.setZ(p1.getZ() + .5);
 
                     p2.setY(p2.getY() + .1);
