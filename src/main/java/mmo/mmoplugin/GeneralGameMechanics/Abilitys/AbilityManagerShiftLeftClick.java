@@ -19,7 +19,7 @@ public class AbilityManagerShiftLeftClick implements Listener {
         Location loc = clickedBlock.getLocation();
 
 
-        if (e.getAction() == Action.RIGHT_CLICK_AIR){
+        if (e.getAction() == Action.LEFT_CLICK_BLOCK){
             if(player.isSneaking()){
 
 
