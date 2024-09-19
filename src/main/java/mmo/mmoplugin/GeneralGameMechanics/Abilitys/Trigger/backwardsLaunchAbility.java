@@ -7,6 +7,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
+import static java.lang.Math.cos;
+import static java.lang.Math.sin;
 import static mmo.mmoplugin.MMOPlugin.MMOPlugin;
 
 public class backwardsLaunchAbility {
@@ -42,12 +44,45 @@ public class backwardsLaunchAbility {
 
             backLaunchParticles = new BukkitRunnable() {
 
-                int animationLoop =0;
+                double phi =0;
+
+                //int animationLoop =0;
 
                 @Override
                 public void run() {
 
-                    animationLoop +=1;
+                    phi += Math.PI/10; //<< 10 circles HIGHLY RECOMENED DO NOT SO MORE
+
+                    for(double theta = 0; theta <= 2*Math.PI; theta += Math.PI/40){
+                        double r = 1.5;
+                        double x = r*cos(theta)*sin(phi);
+                        double y = r*cos(phi) + 1.5;
+                        double z = r*sin(theta) * sin(phi);
+                        loc.add(x,y,z);
+                        world.spawnParticle(Particle.DRIPPING_WATER,loc,0,0,0,0,1);
+                        loc.subtract(x,y,z);
+                    }
+
+
+
+
+                    if(phi>Math.PI){
+                        this.cancel();
+                        return;
+                    }
+
+
+
+
+
+                    for(int x = 0; x<10; x++) {
+
+                        double y = cos(x);
+
+                    }
+
+
+                    /*animationLoop +=1;
 
                     if(animationLoop > 50){
                         this.cancel();
@@ -79,7 +114,7 @@ public class backwardsLaunchAbility {
                         //player.getWorld().spawnParticle(Particle.DUST, p2, 0, new Particle.DustOptions(Color.RED, 2.0f));
                         //player.getWorld().spawnParticle(Particle.DUST, p3, 0, new Particle.DustOptions(Color.GREEN, 2.0f));
                         //player.getWorld().spawnParticle(Particle.DUST, p4, 0, new Particle.DustOptions(Color.YELLOW, 2.0f));
-                    }
+                    }*/
 
                 }
             };
