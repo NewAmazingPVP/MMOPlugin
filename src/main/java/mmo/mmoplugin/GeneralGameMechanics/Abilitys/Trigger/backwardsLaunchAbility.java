@@ -76,9 +76,9 @@ public class backwardsLaunchAbility {
 
                     for (Player player : Bukkit.getOnlinePlayers()) {
                         player.getWorld().spawnParticle(Particle.DUST, p1, 0, new Particle.DustOptions(Color.AQUA, 2.0f));
-                        player.getWorld().spawnParticle(Particle.DUST, p2, 0, new Particle.DustOptions(Color.AQUA, 2.0f));
-                        player.getWorld().spawnParticle(Particle.DUST, p3, 0, new Particle.DustOptions(Color.AQUA, 2.0f));
-                        player.getWorld().spawnParticle(Particle.DUST, p4, 0, new Particle.DustOptions(Color.AQUA, 2.0f));
+                        player.getWorld().spawnParticle(Particle.DUST, p2, 0, new Particle.DustOptions(Color.RED, 2.0f));
+                        player.getWorld().spawnParticle(Particle.DUST, p3, 0, new Particle.DustOptions(Color.GREEN, 2.0f));
+                        player.getWorld().spawnParticle(Particle.DUST, p4, 0, new Particle.DustOptions(Color.YELLOW, 2.0f));
                     }
 
                 }
