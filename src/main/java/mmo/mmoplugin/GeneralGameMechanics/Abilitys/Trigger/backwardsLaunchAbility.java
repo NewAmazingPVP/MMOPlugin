@@ -54,10 +54,10 @@ public class backwardsLaunchAbility {
                         return;
                     }
 
-                    player.sendMessage("   " + p1);
+                    player.sendMessage("---" + p1);
 
                     //p1.setY(p1.getY() + .1);
-                    p1.setX(p1.getX() + .3);
+                    p1.setX(p1.getX() + 1);
                     p1.setZ(p1.getZ() + .3);
 
                     p2.setY(p2.getY() + .1);
@@ -76,9 +76,9 @@ public class backwardsLaunchAbility {
 
                     for (Player player : Bukkit.getOnlinePlayers()) {
                         player.getWorld().spawnParticle(Particle.DUST, p1, 0, new Particle.DustOptions(Color.AQUA, 2.0f));
-                        player.getWorld().spawnParticle(Particle.DUST, p2, 0, new Particle.DustOptions(Color.RED, 2.0f));
-                        player.getWorld().spawnParticle(Particle.DUST, p3, 0, new Particle.DustOptions(Color.GREEN, 2.0f));
-                        player.getWorld().spawnParticle(Particle.DUST, p4, 0, new Particle.DustOptions(Color.YELLOW, 2.0f));
+                        //player.getWorld().spawnParticle(Particle.DUST, p2, 0, new Particle.DustOptions(Color.RED, 2.0f));
+                        //player.getWorld().spawnParticle(Particle.DUST, p3, 0, new Particle.DustOptions(Color.GREEN, 2.0f));
+                        //player.getWorld().spawnParticle(Particle.DUST, p4, 0, new Particle.DustOptions(Color.YELLOW, 2.0f));
                     }
 
                 }
