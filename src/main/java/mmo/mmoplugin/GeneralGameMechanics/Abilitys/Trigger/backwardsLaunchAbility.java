@@ -36,11 +36,9 @@ public class backwardsLaunchAbility {
 
             player.setVelocity(velocity);
 
+            loc.setY(loc.getY()+1);
 
-            Location p1 = loc;
-            Location p2 = loc;
-            Location p3 = loc;
-            Location p4 = loc;
+            world.spawnParticle(Particle.CLOUD,loc,2);
 
             backLaunchParticles = new BukkitRunnable() {
 
@@ -59,7 +57,7 @@ public class backwardsLaunchAbility {
                         double y = r*cos(phi) + 1.5;
                         double z = r*sin(theta) * sin(phi);
                         loc.add(x,y,z);
-                        world.spawnParticle(Particle.DRIPPING_WATER,loc,0,0,0,0,1);
+                        world.spawnParticle(Particle.COMPOSTER,loc,0,0,0,0,1);
                         loc.subtract(x,y,z);
                     }
 
@@ -71,46 +69,12 @@ public class backwardsLaunchAbility {
                         return;
                     }
 
-                    
 
 
-                    /*animationLoop +=1;
-
-                    if(animationLoop > 50){
-                        this.cancel();
-                        return;
-                    }
-
-                    player.sendMessage("+++" + p1);
-
-                    //p1.setY(p1.getY() + .1);
-                    p1.setX(p1.getX() + .5);
-                    p1.setZ(p1.getZ() + .2);
-
-                    //p2.setY(p2.getY() + .1);
-                    p2.setX(p2.getX() - .3);
-                    p2.setZ(p2.getZ() - .3);
-
-                    //p3.setY(p3.getY() + .1);
-                    p3.setX(p3.getX() - .3);
-                    p3.setZ(p3.getZ() + .3);
-
-                    //p4.setY(p4.getY() + .1);
-                    p4.setX(p4.getX() + .3);
-                    p4.setZ(p4.getZ() - .3);
-
-
-
-                    for (Player player : Bukkit.getOnlinePlayers()) {
-                        player.getWorld().spawnParticle(Particle.DUST, p1, 0, new Particle.DustOptions(Color.AQUA, 2.0f));
-                        //player.getWorld().spawnParticle(Particle.DUST, p2, 0, new Particle.DustOptions(Color.RED, 2.0f));
-                        //player.getWorld().spawnParticle(Particle.DUST, p3, 0, new Particle.DustOptions(Color.GREEN, 2.0f));
-                        //player.getWorld().spawnParticle(Particle.DUST, p4, 0, new Particle.DustOptions(Color.YELLOW, 2.0f));
-                    }*/
 
                 }
             };
-            backLaunchParticles.runTaskTimer(MMOPlugin, 0L, 1L);
+            backLaunchParticles.runTaskTimer(MMOPlugin, 0L, 0L);
 
 
 
