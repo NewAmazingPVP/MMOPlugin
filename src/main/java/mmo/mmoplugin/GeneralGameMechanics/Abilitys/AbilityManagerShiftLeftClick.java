@@ -29,7 +29,7 @@ public class AbilityManagerShiftLeftClick implements Listener {
 
                 //backwardsLaunchAbilityTRIGGER(loc,player);
 
-                smallBurstAbilityTRIGGER(playerLoc,player);
+                //smallBurstAbilityTRIGGER(playerLoc,player);
 
             }
 
