@@ -8,6 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
+import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Trigger.SmallBurstAbility.smallBurstAbilityTRIGGER;
 import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Trigger.backwardsLaunchAbility.backwardsLaunchAbilityTRIGGER;
 
 public class AbilityManagerShiftLeftClick implements Listener {
@@ -27,6 +28,7 @@ public class AbilityManagerShiftLeftClick implements Listener {
 
                 backwardsLaunchAbilityTRIGGER(loc,player);
 
+                smallBurstAbilityTRIGGER(loc,player);
 
             }
 
