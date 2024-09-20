@@ -17,6 +17,7 @@ public class AbilityManagerShiftLeftClick implements Listener {
     public void event(PlayerInteractEvent e){
 
         Player player = e.getPlayer();
+        Location playerLoc = player.getLocation();
         Block clickedBlock = e.getClickedBlock();
         assert clickedBlock != null;
         Location loc = clickedBlock.getLocation();
@@ -28,7 +29,7 @@ public class AbilityManagerShiftLeftClick implements Listener {
 
                 //backwardsLaunchAbilityTRIGGER(loc,player);
 
-                smallBurstAbilityTRIGGER(loc,player);
+                smallBurstAbilityTRIGGER(playerLoc,player);
 
             }
 
