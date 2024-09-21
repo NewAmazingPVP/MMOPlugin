@@ -4,7 +4,8 @@ import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.util.Vector;
 
-import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Animations.ParticleSmallCircleAnimation.setSmallCircleAnimation;
+
+import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Animations.ParticleSpiralAnimation.setSpiralAnimation;
 
 public class backwardsLaunchAbility {
 
@@ -36,7 +37,7 @@ public class backwardsLaunchAbility {
             world.spawnParticle(Particle.CLOUD,loc,20);
 
 
-            setSmallCircleAnimation(loc, Particle.COMPOSTER, 1);
+            setSpiralAnimation(loc, Particle.COMPOSTER, 1);
 
 
 
