@@ -1,18 +1,13 @@
-package mmo.mmoplugin.GeneralGameMechanics.Abilitys.Trigger;
+package mmo.mmoplugin.GeneralGameMechanics.Abilitys.TriggerAbilitys;
 
 import org.bukkit.*;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
-import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.util.Vector;
 
 import java.util.List;
 
-import static java.lang.Math.cos;
-import static java.lang.Math.sin;
-
 import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Animations.ParticleBallAnimation.setBallParticleAnimation;
-import static mmo.mmoplugin.MMOPlugin.MMOPlugin;
 
 public class SmallBurstAbility {
 

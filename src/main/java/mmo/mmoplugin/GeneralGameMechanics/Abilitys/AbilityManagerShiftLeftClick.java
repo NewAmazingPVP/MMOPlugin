@@ -8,8 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 
-import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Trigger.SmallBurstAbility.smallBurstAbilityTRIGGER;
-import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Trigger.backwardsLaunchAbility.backwardsLaunchAbilityTRIGGER;
+import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.TriggerAbilitys.SmallBurstAbility.smallBurstAbilityTRIGGER;
 
 public class AbilityManagerShiftLeftClick implements Listener {
 
@@ -27,9 +26,9 @@ public class AbilityManagerShiftLeftClick implements Listener {
             if(player.isSneaking()){
 
 
-                //backwardsLaunchAbilityTRIGGER(loc,player);
+                backwardsLaunchAbilityTRIGGER(loc,player);
 
-                smallBurstAbilityTRIGGER(playerLoc,player);
+                //smallBurstAbilityTRIGGER(playerLoc,player);
 
             }
 
