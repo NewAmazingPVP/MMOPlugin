@@ -31,7 +31,7 @@ public class ParticleSmallCircleAnimation {
                 for (double theta = 0; theta <= 2 * Math.PI; theta += Math.PI / 40) {
                     double r = 1.5;
                     double x = r * cos(theta) * sin(phi);
-                    double y = r * cos(phi);  // + 1.5
+                    double y = loc.getY();  // r * cos(phi) + 1.5
                     double z = r * sin(theta) * sin(phi);
                     loc.add(x, y, z);
                     world.spawnParticle(particle, loc, 0, 0, 0, 0, 1);
