@@ -9,6 +9,7 @@ import org.bukkit.util.Vector;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
+import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Animations.ParticleSmallCircleAnimation.setSmallCircleAnimation;
 import static mmo.mmoplugin.MMOPlugin.MMOPlugin;
 
 public class backwardsLaunchAbility {
@@ -41,6 +42,7 @@ public class backwardsLaunchAbility {
             world.spawnParticle(Particle.CLOUD,loc,20);
 
 
+            setSmallCircleAnimation(loc, Particle.COMPOSTER, 1);
 
 
 

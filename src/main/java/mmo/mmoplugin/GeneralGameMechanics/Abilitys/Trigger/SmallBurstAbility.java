@@ -10,7 +10,8 @@ import java.util.List;
 
 import static java.lang.Math.cos;
 import static java.lang.Math.sin;
-import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Animations.ParticleBallAnimation.ballParticleAnimation;
+
+import static mmo.mmoplugin.GeneralGameMechanics.Abilitys.Animations.ParticleBallAnimation.setBallParticleAnimation;
 import static mmo.mmoplugin.MMOPlugin.MMOPlugin;
 
 public class SmallBurstAbility {
@@ -27,7 +28,7 @@ public class SmallBurstAbility {
         World world = location.getWorld();
         if (world != null) {
 
-            ballParticleAnimation(location, player, Particle.FLAME, 1);
+            setBallParticleAnimation(location, Particle.FLAME, 1);
 
             for (Entity onlineEntity : world.getEntities()) {
 
