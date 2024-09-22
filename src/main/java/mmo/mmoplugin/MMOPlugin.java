@@ -4,6 +4,7 @@ import mmo.mmoplugin.GeneralGameMechanics.Abilitys.AbilityManagerShiftLeftClick;
 import mmo.mmoplugin.GeneralGameMechanics.Commands.UserCommands.OpenAbilityMenuCMD;
 import mmo.mmoplugin.GeneralGameMechanics.DeathMechanics.DeathMain;
 import mmo.mmoplugin.GeneralGameMechanics.MainMenuAndStats.MainMenuListener;
+import mmo.mmoplugin.YMLReading.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -26,6 +27,7 @@ public final class MMOPlugin extends JavaPlugin {
 
 
     public static MMOPlugin MMOPlugin;
+    public static ConfigManager configManager;
     public static World MMOworld = Bukkit.getWorld("world");
     public static final String PLUGIN_WATERMARK = "© 2024 [NewAmazingPVP & Comet99 & Lex] - [MMOPlugin]";
     @Override
@@ -48,7 +50,8 @@ public final class MMOPlugin extends JavaPlugin {
 
         getCommand("abilities").setExecutor(new OpenAbilityMenuCMD());
 
-
+        configManager = new ConfigManager(this.getDataFolder(), "stats.yml");
+        configManager.addDefault("stats", "1");
 
         registerCommandsAndListeners();
 
