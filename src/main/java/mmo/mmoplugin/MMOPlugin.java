@@ -4,7 +4,8 @@ import mmo.mmoplugin.GeneralGameMechanics.Abilitys.AbilityManagerShiftLeftClick;
 import mmo.mmoplugin.GeneralGameMechanics.Commands.UserCommands.OpenAbilityMenuCMD;
 import mmo.mmoplugin.GeneralGameMechanics.DeathMechanics.DeathMain;
 import mmo.mmoplugin.GeneralGameMechanics.MainMenuAndStats.MainMenuListener;
-import mmo.mmoplugin.YMLReading.ConfigManager;
+import mmo.mmoplugin.NPCAndBlockGUIs.CraftingMenu;
+import mmo.mmoplugin.Utils.YMLReading.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -45,17 +46,29 @@ public final class MMOPlugin extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new DeathMain(), this);
         getServer().getPluginManager().registerEvents(new MainMenuListener(), this);
         getServer().getPluginManager().registerEvents(new AbilityManagerShiftLeftClick(), this);
+        getServer().getPluginManager().registerEvents(new CraftingMenu(), this);
 
 
 
         getCommand("abilities").setExecutor(new OpenAbilityMenuCMD());
 
+
+        //TODO: EXAMPLE
         configManager = new ConfigManager(this.getDataFolder(), "stats.yml");
         configManager.addDefault("stats", "1");
         int stats = configManager.getInt("stats");
         configManager.setOption("stats", stats+1);
 
-        registerCommandsAndListeners();
+
+        //data save
+
+
+
+
+
+
+
+
 
 
 
