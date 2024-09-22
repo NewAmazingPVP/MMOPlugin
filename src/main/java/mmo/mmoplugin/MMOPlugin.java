@@ -53,7 +53,7 @@ public final class MMOPlugin extends JavaPlugin {
         configManager = new ConfigManager(this.getDataFolder(), "stats.yml");
         configManager.addDefault("stats", "1");
         int stats = configManager.getInt("stats");
-        configManager.saveConfig();
+        configManager.setOption("stats", stats+1);
 
         registerCommandsAndListeners();
 
