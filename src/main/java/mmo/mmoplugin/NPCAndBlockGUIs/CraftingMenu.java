@@ -1,9 +1,6 @@
 package mmo.mmoplugin.NPCAndBlockGUIs;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -17,13 +14,16 @@ import java.awt.event.ContainerEvent;
 
 public class CraftingMenu implements Listener {
 
+
+
+
     @EventHandler
     public void openCraftingTable(PlayerInteractEvent e){
 
         Player player = e.getPlayer();
         Block clickedBlock = e.getClickedBlock();
 
-        if (e.getAction() == Action.LEFT_CLICK_BLOCK && clickedBlock.getType() == Material.CRAFTING_TABLE){
+        if (e.getAction() == Action.RIGHT_CLICK_BLOCK && clickedBlock.getType() == Material.CRAFTING_TABLE){
             e.setCancelled(true);
 
             openCustomCraftingMenu(player);
