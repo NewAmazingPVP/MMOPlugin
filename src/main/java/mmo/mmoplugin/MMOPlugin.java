@@ -43,14 +43,15 @@ public final class MMOPlugin extends JavaPlugin {
 
         //register events and commands
 
-        getServer().getPluginManager().registerEvents(new DeathMain(), this);
-        getServer().getPluginManager().registerEvents(new MainMenuListener(), this);
-        getServer().getPluginManager().registerEvents(new AbilityManagerShiftLeftClick(), this);
-        getServer().getPluginManager().registerEvents(new CraftingMenu(), this);
+        //getServer().getPluginManager().registerEvents(new DeathMain(), this);
+        //getServer().getPluginManager().registerEvents(new MainMenuListener(), this);
+        //getServer().getPluginManager().registerEvents(new AbilityManagerShiftLeftClick(), this);
+        //getServer().getPluginManager().registerEvents(new CraftingMenu(), this);
 
 
+        
 
-        getCommand("abilities").setExecutor(new OpenAbilityMenuCMD());
+        //getCommand("abilities").setExecutor(new OpenAbilityMenuCMD());
 
 
         //TODO: EXAMPLE
