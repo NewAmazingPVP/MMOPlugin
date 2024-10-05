@@ -1,4 +1,4 @@
-package mmo.PITTEST;
+package mmo.mmoplugin.PITTEST;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -13,8 +13,6 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import static java.lang.Math.cos;
-import static java.lang.Math.sin;
 import static mmo.mmoplugin.MMOPlugin.MMOPlugin;
 
 public class MysticWell implements Listener {
@@ -34,7 +32,7 @@ public class MysticWell implements Listener {
 
         }
     }
-
+    
     @EventHandler
     public void closeMenu(InventoryCloseEvent e) {
 
