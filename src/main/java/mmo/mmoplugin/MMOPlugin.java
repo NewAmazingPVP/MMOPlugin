@@ -5,6 +5,7 @@ import mmo.mmoplugin.GeneralGameMechanics.Commands.UserCommands.OpenAbilityMenuC
 import mmo.mmoplugin.GeneralGameMechanics.DeathMechanics.DeathMain;
 import mmo.mmoplugin.GeneralGameMechanics.MainMenuAndStats.MainMenuListener;
 import mmo.mmoplugin.NPCAndBlockGUIs.CraftingMenu;
+import mmo.mmoplugin.PITTEST.MysticWell;
 import mmo.mmoplugin.Utils.YMLReading.ConfigManager;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
@@ -47,7 +48,7 @@ public final class MMOPlugin extends JavaPlugin {
         //getServer().getPluginManager().registerEvents(new MainMenuListener(), this);
         //getServer().getPluginManager().registerEvents(new AbilityManagerShiftLeftClick(), this);
         //getServer().getPluginManager().registerEvents(new CraftingMenu(), this);
-
+        getServer().getPluginManager().registerEvents(new MysticWell(), this);
 
         
 
