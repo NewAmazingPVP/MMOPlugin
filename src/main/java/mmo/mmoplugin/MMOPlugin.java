@@ -48,7 +48,6 @@ public final class MMOPlugin extends JavaPlugin {
         //getServer().getPluginManager().registerEvents(new MainMenuListener(), this);
         //getServer().getPluginManager().registerEvents(new AbilityManagerShiftLeftClick(), this);
         //getServer().getPluginManager().registerEvents(new CraftingMenu(), this);
-        getServer().getPluginManager().registerEvents(new MysticWell(), this);
 
         
 
